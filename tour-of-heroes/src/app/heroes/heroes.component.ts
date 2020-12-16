@@ -1,4 +1,4 @@
-import { HEROES } from './../mock-heroes';
+import { HeroService } from './../hero.service';
 import { Component, OnInit } from '@angular/core';
 import {Hero} from "../hero"
 
@@ -10,14 +10,18 @@ import {Hero} from "../hero"
 })
 export class HeroesComponent implements OnInit {
 
-  heroes = HEROES;
+  heroes :Hero[]; //doubt
 
   selectedHero : Hero;
-  constructor() { 
+  constructor(private heroService: HeroService) {  //doubt
+  }
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe (heroes => this.heroes = heroes)
   }
   ngOnInit(): void {
+    this.getHeroes(); //life cycle method. Angular will call getHeroes at the required time
   }
-  onSelect(hero:Hero): void {
+  onSelect(hero:Hero): void { //doubt
     this.selectedHero = hero; 
   }
 }
