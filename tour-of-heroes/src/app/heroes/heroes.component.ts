@@ -14,7 +14,7 @@ export class HeroesComponent implements OnInit {
 
   heroes :Hero[]; //doubt
 
-  selectedHero : Hero;
+  // selectedHero : Hero;
   constructor(private heroService: HeroService ,private messageService: MessageService) {  //doubt
   }
   getHeroes(): void {
@@ -23,8 +23,8 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
     this.getHeroes(); //life cycle method. Angular will call getHeroes at the required time
   }
-  onSelect(hero:Hero): void { //doubt
-    this.selectedHero = hero; 
-    this.messageService.add("HeroesComponent: Selected Hero")
-  }
+  // onSelect(hero:Hero): void { //doubt
+    // this.selectedHero = hero; 
+  //   this.messageService.add("HeroesComponent: Selected Hero")
+  // }
 }
