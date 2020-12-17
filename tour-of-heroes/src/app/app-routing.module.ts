@@ -6,9 +6,9 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 
 const routes: Routes = [
+  {path:"" , redirectTo: "/dashboard", pathMatch: "full"}, //doubt
   {path : "heroes" ,component : HeroesComponent},
   {path: "dashboard", component: DashboardComponent},
-  {path:"" , redirectTo: "/dashboard", pathMatch: "full"}, //doubt
   {path: "detail/:id", component: HeroDetailComponent} //for dynamic path for heroes with differrnt id's
 ];
 
