@@ -1,4 +1,8 @@
 <h2>My Heroes</h2>
+<label>Hero Name;                                      
+  <input #heroName>
+</label>
+<button (click) = add(heroName.value); heroName.value = ''''></button>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a rouerLink="/detail/{{ hero.id }}">
@@ -6,6 +10,7 @@
       >{{ hero.name }}
     </a>
   </li>
-</ul>
+</ul>  
 
 <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+ 
