@@ -32,7 +32,7 @@ export class HeroService {
   getHeroes(): Observable<Hero[]> {
     this.messageService.add('HeroService: fetched heroes')
     return this.http.get<Hero[]>(this.heroesUrl).pipe(catchError(this.handleError<Hero[]>('getHeroes', [])))
-}
+  }
   getHero(id :number): Observable<Hero> {
     this.messageService.add(`HeroService: fetched hero id = ${id}`);
     return of (HEROES.find(hero => hero.id === id))
