@@ -1,10 +1,25 @@
+.list-heading {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.list-heading h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+}
+
 .list-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 4em;
+  margin-top: 2em;
+  padding: 0.5em;
+  background-color: rgb(133, 228, 218);
+  border-radius: 10px;
 }
 .list-container button {
   width: 50%;

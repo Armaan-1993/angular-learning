@@ -1,6 +1,10 @@
 <div class="add-to-list-container">
   <form>
-    <input type="text" />
+    <input
+      type="text"
+      ([ngModel])="(list.name)"
+      placeholder="Enter a text here"
+    />
   </form>
   <button>Add To List</button>
 </div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddToListComponent } from './add-to-list/add-to-list.component';
 import { ListContainerComponent } from './list-container/list-container.component';
 import { ListContainerItemComponent } from './list-container-item/list-container-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListContainerItemComponent } from './list-container-item/list-container
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
