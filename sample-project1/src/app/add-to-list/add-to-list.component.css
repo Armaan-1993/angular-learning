@@ -11,6 +11,8 @@
   font-size: 1rem;
   outline: none;
   border: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 5px;
 }
 
 .add-to-list-container button:hover {

@@ -4,15 +4,20 @@
   display: flex;
   margin-top: 1.5em;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 2px solid rgb(238, 224, 224);
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 2em;
+  height: auto;
+  background-color: rgb(233, 226, 226);
 }
 .list-item-container p {
   width: 60%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1em;
+  height: auto;
+  font-weight: 200;
 }
 .list-item-container button {
   padding: 0.5em 1em 0.5em 1em;
@@ -22,6 +27,9 @@
   font-weight: lighter;
   margin-left: 1em;
   margin-right: 1em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .list-item-container button:hover {
