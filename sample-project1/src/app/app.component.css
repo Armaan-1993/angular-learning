@@ -1,0 +1,9 @@
+.heading-container {
+  display: flex;
+  justify-content: center;
+}
+.heading-container h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3em;
+  font-weight: 200;
+}

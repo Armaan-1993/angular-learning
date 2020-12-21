@@ -1,0 +1,19 @@
+.add-to-list-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  margin-top: 5em;
+  align-items: center;
+}
+.add-to-list-container button {
+  padding: 1em;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+}
+
+.add-to-list-container button:hover {
+  color: white;
+  background-color: black;
+}

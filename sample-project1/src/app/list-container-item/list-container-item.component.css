@@ -1,0 +1,30 @@
+.list-item-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 1.5em;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid rgb(238, 224, 224);
+  border-radius: 3px;
+  padding: 2em;
+}
+.list-item-container p {
+  width: 60%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: em;
+}
+.list-item-container button {
+  padding: 0.5em 1em 0.5em 1em;
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  font-weight: lighter;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.list-item-container button:hover {
+  color: white;
+  background-color: black;
+}
