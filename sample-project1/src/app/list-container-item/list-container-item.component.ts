@@ -1,6 +1,6 @@
 import { arrayList } from './../../mock-list';
 import { List } from './../list';
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-container-item',
@@ -12,11 +12,16 @@ export class ListContainerItemComponent implements OnInit {
   constructor() { }
 
   LISTS = arrayList;
-  selectedList: List;
+  @Input() 
+  set  inputToSecondChild(val) {
+    this.LISTS.push({
+      id: 10,
+      name: val
+    })
+  }
 
-  @Input() list : List;
-
-  ngOnInit(): void {
+    ngOnInit(): void {
+      console.log(this.inputToSecondChild)
   }
 
 }

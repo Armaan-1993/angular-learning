@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { List } from './../list';
 import { arrayList } from './../../mock-list';
 
@@ -10,11 +10,20 @@ import { arrayList } from './../../mock-list';
 export class AddToListComponent implements OnInit {
 
   constructor() { }
+  
+  inputToChild:any = "Hello world";
+  formInput: string;
 
-
-  list = arrayList;
+  LISTS = arrayList;
   selectedList: List;
+
+  onSelect() {
+    this.inputToChild = this.formInput;
+    console.log(this.inputToChild);
+  }
+
   ngOnInit(): void {
   }
+
 
 }
