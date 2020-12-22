@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { List } from './../list';
+import { List } from './../list';
 import { arrayList } from './../../mock-list';
 
 @Component({
@@ -11,7 +11,9 @@ export class AddToListComponent implements OnInit {
 
   constructor() { }
 
+
   list = arrayList;
+  selectedList: List;
   ngOnInit(): void {
   }
 

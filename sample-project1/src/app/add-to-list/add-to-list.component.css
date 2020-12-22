@@ -3,7 +3,7 @@
   width: 80%;
   margin: 0 auto;
   justify-content: space-around;
-  margin-top: 5em;
+  margin-top: 3em;
   align-items: center;
   background-color: rgb(148, 230, 127);
   padding: 2em;
@@ -16,6 +16,7 @@
   border: none;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   border-radius: 5px;
+  background-color: white;
 }
 
 .add-to-list-container button:hover {

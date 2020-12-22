@@ -1,11 +1,7 @@
-<div class="list-item-container">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora
-    illum, itaque voluptatibus sed cupiditate blanditiis aspernatur facere porro
-    ipsum?
-  </p>
+<div class="list-item-container" *ngFor="let list of LISTS">
+  <p>id = {{ list.id }} , name = {{ list.name }}</p>
   <div>
-    <button>Update</button>
+    <button (click)="onSelect(list)">Update</button>
     <button>Delete</button>
   </div>
 </div>
