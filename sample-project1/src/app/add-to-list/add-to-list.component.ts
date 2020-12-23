@@ -11,16 +11,16 @@ export class AddToListComponent implements OnInit {
 
   constructor() { }
   
-  inputToChild:any = "Hello world";
-  formInput: string;
+  inputToChild:any;
+  formInput: any;
 
   LISTS = arrayList;
   selectedList: List;
 
   onSelect() {
     this.inputToChild = this.formInput;
-    console.log(this.inputToChild);
-  }
+    // console.log(`The  inputotchild is ${this.inputToChild} and the form input is ${this.formInput}`)
+}
 
   ngOnInit(): void {
   }

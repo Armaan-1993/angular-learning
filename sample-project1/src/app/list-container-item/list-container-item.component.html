@@ -1,7 +1,7 @@
 <div class="list-item-container" *ngFor="let list of LISTS">
   <p>id = {{ list.id }} , name = {{ list.name }}</p>
   <div>
-    <button (click)="onSelect(list)">Update</button>
-    <button>Delete</button>
+    <button>Update</button>
+    <button (click)="onDelete()">Delete</button>
   </div>
 </div>

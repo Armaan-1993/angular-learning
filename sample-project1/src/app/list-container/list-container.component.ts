@@ -15,10 +15,10 @@ export class ListContainerComponent implements OnInit {
   inputDataValue: any;
 
   @Input() 
-  set inputData (val) {
-    console.log(val);
-    this.inputDataValue = val;
-  }
+ set  inputData (val) {
+   this.inputDataValue = val;
+  //  console.log(`This is the inputDataValue ${this.inputDataValue}`) 
+ }
 
   ngOnInit(): void {
   }

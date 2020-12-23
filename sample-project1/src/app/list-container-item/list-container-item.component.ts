@@ -15,13 +15,18 @@ export class ListContainerItemComponent implements OnInit {
   @Input() 
   set  inputToSecondChild(val) {
     this.LISTS.push({
-      id: 10,
+      id: this.LISTS.length + 1,
       name: val
     })
+    console.log(`The inputtosecondchild is ${val}`)
   }
 
+  // onDelete () {
+  //   if(this.LISTS.length  > 0) {
+  //   this.LISTS[this.LISTS.length - 1].id === 
+  //   }
+  // }
     ngOnInit(): void {
-      console.log(this.inputToSecondChild)
   }
 
 }

@@ -2,14 +2,14 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid rgb(238, 224, 224);
+  border: 2px solid rgb(224, 218, 218);
   border-radius: 5px;
   padding: 2em;
   height: auto;
-  background-color: rgb(233, 226, 226);
+  background-color: rgb(224, 218, 218);
 }
 .list-item-container p {
   width: 60%;
