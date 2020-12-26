@@ -12,11 +12,16 @@ export class ListContainerComponent implements OnInit {
   constructor() { }
 
   LISTS = arrayList;
-  inputDataValue: any;
+  inputDataValue: any = this.LISTS;
 
   @Input() 
  set  inputData (val) {
-   this.inputDataValue = val;
+   console.log(val)
+   if(val.name !== "") {
+    this.inputDataValue.push(val);
+   }
+ 
+   
   //  console.log(`This is the inputDataValue ${this.inputDataValue}`) 
  }
 

@@ -1,6 +1,6 @@
 import { arrayList } from './../../mock-list';
 import { List } from './../list';
-import { Component, OnInit ,Input } from '@angular/core';
+import { Component, OnInit ,Input ,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-list-container-item',
@@ -11,21 +11,29 @@ export class ListContainerItemComponent implements OnInit {
 
   constructor() { }
 
+  inputValue : any = {id: "", name: ""}
+
   LISTS = arrayList;
   @Input() 
-  set  inputToSecondChild(val) {
-    this.LISTS.push({
-      id: this.LISTS.length + 1,
-      name: val
-    })
-    console.log(`The inputtosecondchild is ${val}`)
+  set  inputToChild(val) {
+    console.log(`child component ${val}`);
+    if(val) {
+      this.inputValue = val;
+    }
   }
+
+  // onDelete () {
+  //  this.newArray = this.LISTS.splice(this.LISTS.length,1)
+  //  console.log(this.newArray);
+  // }
+
 
   // onDelete () {
   //   if(this.LISTS.length  > 0) {
   //   this.LISTS[this.LISTS.length - 1].id === 
   //   }
   // }
+
     ngOnInit(): void {
   }
 

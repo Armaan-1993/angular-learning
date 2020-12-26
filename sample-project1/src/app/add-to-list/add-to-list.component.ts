@@ -10,15 +10,14 @@ import { arrayList } from './../../mock-list';
 export class AddToListComponent implements OnInit {
 
   constructor() { }
-  
-  inputToChild:any;
-  formInput: any;
-
   LISTS = arrayList;
   selectedList: List;
+  
+  inputToChild:any = {id: this.LISTS.length+1 ,name: ""};
+  formInput: any;
 
   onSelect() {
-    this.inputToChild = this.formInput;
+    this.inputToChild = {id : this.LISTS.length+1,name: this.formInput}
     // console.log(`The  inputotchild is ${this.inputToChild} and the form input is ${this.formInput}`)
 }
 
