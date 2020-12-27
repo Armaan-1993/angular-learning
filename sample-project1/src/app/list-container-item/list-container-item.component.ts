@@ -21,10 +21,10 @@ export class ListContainerItemComponent implements OnInit {
       this.inputValue = val;
     }
   }
-   @Output() secondChildOutput: EventEmitter <number> = new EventEmitter();
+   @Output() myOutput: EventEmitter <number> = new EventEmitter();
 
    deleteItem (val) {
-    this.secondChildOutput.emit(val);
+    this.myOutput.emit(val);
    }
 
 
