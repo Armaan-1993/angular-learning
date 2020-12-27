@@ -21,11 +21,11 @@ export class ListContainerItemComponent implements OnInit {
       this.inputValue = val;
     }
   }
+   @Output() secondChildOutput: EventEmitter <number> = new EventEmitter();
 
-  // onDelete () {
-  //  this.newArray = this.LISTS.splice(this.LISTS.length,1)
-  //  console.log(this.newArray);
-  // }
+   deleteItem (val) {
+    this.secondChildOutput.emit(val);
+   }
 
 
   // onDelete () {

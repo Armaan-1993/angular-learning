@@ -2,6 +2,11 @@
   <p>id = {{ inputValue.id }}, name = {{ inputValue.name }}</p>
   <div>
     <button>Update</button>
-    <button>Delete</button>
+    <button
+      (click)="deleteItem(inputValue.id)"
+      (firstChildOutput)="(secondChildOutput)"
+    >
+      Delete
+    </button>
   </div>
 </div>

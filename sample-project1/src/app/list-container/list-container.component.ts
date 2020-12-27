@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input } from '@angular/core';
+import { Component, OnInit ,Input, Output } from '@angular/core';
 import { arrayList } from './../../mock-list';
 import { List } from './../list';
 
@@ -20,7 +20,6 @@ export class ListContainerComponent implements OnInit {
    if(val.name !== "") {
     this.inputDataValue.push(val);
    }
- 
    
   //  console.log(`This is the inputDataValue ${this.inputDataValue}`) 
  }

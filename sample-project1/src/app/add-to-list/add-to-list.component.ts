@@ -19,7 +19,7 @@ export class AddToListComponent implements OnInit {
   onSelect() {
     this.inputToChild = {id : this.LISTS.length+1,name: this.formInput}
     // console.log(`The  inputotchild is ${this.inputToChild} and the form input is ${this.formInput}`)
-}
+  }
 
   ngOnInit(): void {
   }
