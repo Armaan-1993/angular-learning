@@ -1,8 +1,18 @@
 <div class="list-item-container">
-  <p>id = {{ inputValue.id }}, name = {{ inputValue.name }}</p>
+  <p>
+    id = {{ inputValue.id }}, name =
+    <span [style.display]="buttonVisible ? 'block' : 'none'">{{
+      inputValue.name
+    }}</span>
+    <input
+      type="text"
+      [(ngModel)]="inputValue.name"
+      [style.display]="isVisible ? 'block' : 'none'"
+    />
+  </p>
   <div>
     <button
-      (click)="openDiv()"
+      (click)="openDiv(inputValue.name)"
       [style.display]="buttonVisible ? 'block' : 'none'"
     >
       Update
@@ -10,7 +20,7 @@
     <button (click)="deleteItem(inputValue.id)">Delete</button>
   </div>
   <div class="hidden-div" [style.display]="isVisible ? 'block' : 'none'">
-    <button>Save</button>
+    <button (click)="closeDiv()">Save</button>
     <button (click)="closeDiv()">Cancel</button>
   </div>
 </div>

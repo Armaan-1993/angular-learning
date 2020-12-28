@@ -13,17 +13,13 @@ export class ListContainerComponent implements OnInit {
 
   LISTS = arrayList;
   inputDataValue: any = this.LISTS;
-  filteredArray:any;
 
   @Input() 
  set  inputData (val) {
    console.log(val)
    if(val.name !== "") {
     this.inputDataValue.push(val);
-    // this.filteredArray = this.inputDataValue;
    }
-   
-  //  console.log(`This is the inputDataValue ${this.inputDataValue}`) 
  }
   firstChildOutput (myval) {
   console.log(`myval is ${myval}`);
@@ -33,6 +29,4 @@ export class ListContainerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-
 }

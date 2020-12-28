@@ -3,6 +3,7 @@ import { List } from './../list';
 import { Component, OnInit ,Input ,Output,EventEmitter} from '@angular/core';
 import { style } from '@angular/animations';
 
+
 @Component({
   selector: 'app-list-container-item',
   templateUrl: './list-container-item.component.html',
@@ -32,23 +33,17 @@ export class ListContainerItemComponent implements OnInit {
    buttonVisible: boolean= true;
    updatedInput: any;
 
-   openDiv() {
+   openDiv(value) {
      this.isVisible = true;
      this.buttonVisible = false;
+    //  const newObject = {id: Date.now(),name: updateObject}
    }
    closeDiv() {
      this.isVisible = false;
      this.buttonVisible = true;
    }
-
-
-  // onDelete () {
-  //   if(this.LISTS.length  > 0) {
-  //   this.LISTS[this.LISTS.length - 1].id === 
-  //   }
-  // }
-
-    ngOnInit(): void {
+  
+    ngOnInit(): void { 
   }
 
 }
