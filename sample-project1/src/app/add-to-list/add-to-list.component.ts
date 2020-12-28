@@ -13,7 +13,7 @@ export class AddToListComponent implements OnInit {
   LISTS = arrayList;
   selectedList: List;
   
-  inputToChild:any = {id: this.LISTS.length+1 ,name: ""};
+  inputToChild:any = {id: Date.now() ,name: ""};
   formInput: any;
 
   onSelect() {

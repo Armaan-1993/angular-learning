@@ -28,10 +28,7 @@ export class ListContainerComponent implements OnInit {
   firstChildOutput (myval) {
   console.log(`myval is ${myval}`);
   console.log(this.inputDataValue);
-  if(this.inputDataValue[this.inputDataValue.length - 1].id === myval) {
-    this.inputDataValue.splice(this.inputDataValue[this.inputDataValue.length - 1] ,1)
-  }
-  
+  this.inputDataValue = this.inputDataValue.filter(item=>item.id!==myval)
  }
 
   ngOnInit(): void {
