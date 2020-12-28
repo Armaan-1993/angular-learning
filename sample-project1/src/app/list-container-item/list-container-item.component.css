@@ -36,3 +36,33 @@
   color: white;
   background-color: black;
 }
+.hidden-div {
+  display: none;
+}
+.hidden-div button:first-child {
+  padding: 0.5em 1em 0.5em 1em;
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  font-weight: lighter;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(103, 202, 56);
+  border-radius: 5px;
+}
+.hidden-div button:last-child {
+  padding: 0.5em 1em 0.5em 1em;
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  font-weight: lighter;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(247, 235, 71);
+  border-radius: 5px;
+}
+.hidden-div button:last-child:hover {
+  color: orangered;
+}

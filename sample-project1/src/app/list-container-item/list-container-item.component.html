@@ -1,7 +1,16 @@
 <div class="list-item-container">
   <p>id = {{ inputValue.id }}, name = {{ inputValue.name }}</p>
   <div>
-    <button>Update</button>
+    <button
+      (click)="openDiv()"
+      [style.display]="buttonVisible ? 'block' : 'none'"
+    >
+      Update
+    </button>
     <button (click)="deleteItem(inputValue.id)">Delete</button>
+  </div>
+  <div class="hidden-div" [style.display]="isVisible ? 'block' : 'none'">
+    <button>Save</button>
+    <button (click)="closeDiv()">Cancel</button>
   </div>
 </div>

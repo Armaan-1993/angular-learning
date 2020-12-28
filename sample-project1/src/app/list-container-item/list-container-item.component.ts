@@ -1,6 +1,7 @@
 import { arrayList } from './../../mock-list';
 import { List } from './../list';
 import { Component, OnInit ,Input ,Output,EventEmitter} from '@angular/core';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-list-container-item',
@@ -25,6 +26,19 @@ export class ListContainerItemComponent implements OnInit {
 
    deleteItem (val) {
     this.myOutput.emit(val);
+   }
+
+   isVisible: boolean= false;
+   buttonVisible: boolean= true;
+   updatedInput: any;
+
+   openDiv() {
+     this.isVisible = true;
+     this.buttonVisible = false;
+   }
+   closeDiv() {
+     this.isVisible = false;
+     this.buttonVisible = true;
    }
 
 
