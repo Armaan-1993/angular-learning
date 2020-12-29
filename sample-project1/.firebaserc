@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sample-project-angular": {
+      "hosting": {
+        "sample-project1": [
+          "sample-project-angular"
+        ]
+      }
+    }
+  }
+}
