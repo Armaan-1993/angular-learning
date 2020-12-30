@@ -24,7 +24,7 @@ export class ListContainerComponent implements OnInit {
  set  inputData (val) {
    console.log(val)
    if(val.name !== "") {
-    this.inputDataValue.push(val);
+    this.itemsFromFs.push(val);
    }
  }
   firstChildOutput (myval) {
@@ -37,7 +37,6 @@ export class ListContainerComponent implements OnInit {
     this.componentService.getItems().subscribe(items => {
       // console.log(items);
       this.itemsFromFs = items;
-      this.inputDataValue.concat(this.itemsFromFs);
     })
   }
   
