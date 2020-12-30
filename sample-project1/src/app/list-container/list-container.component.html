@@ -3,7 +3,7 @@
 </div>
 <div class="list-container">
   <app-list-container-item
-    *ngFor="let list of inputDataValue"
+    *ngFor="let list of itemsFromFs"
     [inputToChild]="list"
     (myOutput)="firstChildOutput($event)"
   ></app-list-container-item>

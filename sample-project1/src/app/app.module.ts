@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,8 @@ import { ListContainerItemComponent } from './list-container-item/list-container
 import { FormsModule } from '@angular/forms';
 import {AngularFireModule} from "@angular/fire"
 import {environment} from "../environments/environment"
+import {AngularFirestoreModule} from "@angular/fire/firestore"
+import { ComponentService } from './component.service';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,11 @@ import {environment} from "../environments/environment"
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase ,"angularfs"),
+    AngularFirestoreModule,
+    
   ],
-  providers: [],
+  providers: [ComponentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

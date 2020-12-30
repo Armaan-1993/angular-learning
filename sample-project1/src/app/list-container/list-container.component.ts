@@ -1,5 +1,6 @@
-import { Component, OnInit ,Input, Output } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { arrayList } from './../../mock-list';
+import { ComponentService } from './../component.service';
 import { List } from './../list';
 
 @Component({
@@ -9,10 +10,15 @@ import { List } from './../list';
 })
 export class ListContainerComponent implements OnInit {
 
-  constructor() { }
+
 
   LISTS = arrayList;
-  inputDataValue: any = this.LISTS;
+  inputDataValue: any[] = this.LISTS;
+
+
+  constructor(private componentService: ComponentService) { }
+
+  itemsFromFs: List[];
 
   @Input() 
  set  inputData (val) {
@@ -28,5 +34,12 @@ export class ListContainerComponent implements OnInit {
  }
 
   ngOnInit(): void {
+    this.componentService.getItems().subscribe(items => {
+      // console.log(items);
+      this.itemsFromFs = items;
+      this.inputDataValue.concat(this.itemsFromFs);
+    })
   }
+  
+
 }
