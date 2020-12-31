@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import { List } from './../list';
 import { arrayList } from './../../mock-list';
+import { ComponentService } from './../component.service';
+import { List } from './../list';
 
 @Component({
   selector: 'app-add-to-list',
@@ -9,15 +10,20 @@ import { arrayList } from './../../mock-list';
 })
 export class AddToListComponent implements OnInit {
 
-  constructor() { }
-  LISTS = arrayList;
-  selectedList: List;
+  constructor(private componentService: ComponentService) { }
+
+  Item: List;
+  // LISTS = arrayList;
+  // selectedList: List;
   
-  inputToChild:any = {id: Date.now() ,name: ""};
-  formInput: any;
+  // inputToChild:any = {id: Date.now() ,name: ""};
+  formInput: List;
 
   onSelect() {
-    this.inputToChild = {id : this.LISTS.length+1,name: this.formInput}
+    if(this.formInput.name !== "" ) {
+      this.Item = {id :Date.now(), name: this.formInput.name}
+    }
+    
     // console.log(`The  inputotchild is ${this.inputToChild} and the form input is ${this.formInput}`)
   }
 

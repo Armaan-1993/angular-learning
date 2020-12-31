@@ -12,6 +12,14 @@ export class ComponentService {
   constructor(public afs: AngularFirestore) {
     this.items = this.afs.collection("items").valueChanges();
     //valueChanges() retuens the data from firestore as an observable
+
+    // this.items = afs.collection("items").snapshotChanges().map(changes => {
+    //   return changes.map(a => {
+    //     const data = a.payload.doc.data() as List;
+    //     data.id = a.playload.doc.id;
+    //     return data;
+    //   })
+    // })
    }
    getItems() {
      return this.items;
