@@ -5,13 +5,11 @@
     <input type="text" [(ngModel)]="inputValue.name" *ngIf="isVisible" />
   </p>
   <div>
-    <button (click)="openDiv(inputValue.name)" *ngIf="buttonVisible">
-      Update
-    </button>
+    <button (click)="openDiv(inputValue)" *ngIf="buttonVisible">Update</button>
     <button (click)="deleteItem(inputValue.id)">Delete</button>
   </div>
   <div class="hidden-div" [style.display]="isVisible ? 'block' : 'none'">
-    <button (click)="closeDiv()">Save</button>
-    <button (click)="closeDiv()">Cancel</button>
+    <button (click)="saveFunction(inputValue)">Save</button>
+    <button (click)="closeFunction(inputValue)">Cancel</button>
   </div>
 </div>

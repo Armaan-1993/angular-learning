@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { arrayList } from './../../mock-list';
 import { ComponentService } from './../component.service';
 import { List } from './../list';
@@ -12,7 +13,7 @@ export class AddToListComponent implements OnInit {
 
   constructor(private componentService: ComponentService) { }
 
-  Item: List;
+  Item: List;    
   // LISTS = arrayList;
   // selectedList: List;
   
@@ -20,15 +21,10 @@ export class AddToListComponent implements OnInit {
   formInput: List;
 
   onSelect() {
-    if(this.formInput.name !== "" ) {
-      this.Item = {id :Date.now(), name: this.formInput.name}
-    }
-    
+    console.log(this.formInput);
+    this.componentService.addItems(this.formInput);
     // console.log(`The  inputotchild is ${this.inputToChild} and the form input is ${this.formInput}`)
   }
-
   ngOnInit(): void {
   }
-
-
 }

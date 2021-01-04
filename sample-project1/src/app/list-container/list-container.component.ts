@@ -22,8 +22,8 @@ export class ListContainerComponent implements OnInit {
 
   @Input() 
  set  inputData (val) {
-   console.log(val)
-   if(val.name !== "") {
+   console.log(`The value of input is ${val}`)
+   if(val !== "") {
     this.itemsFromFs.push(val);
    }
  }

@@ -11,18 +11,19 @@ export class ComponentService {
   items: Observable<List[]>;
   constructor(public afs: AngularFirestore) {
     this.items = this.afs.collection("items").valueChanges();
-    //valueChanges() retuens the data from firestore as an observable
-
-    // this.items = afs.collection("items").snapshotChanges().map(changes => {
-    //   return changes.map(a => {
-    //     const data = a.payload.doc.data() as List;
-    //     data.id = a.playload.doc.id;
-    //     return data;
-    //   })
-    // })
-   }
+  }
    getItems() {
      return this.items;
+   }
+   addItems(myval) {
+    this.afs.collection("items").add({ name }).then((ref) => ref.update({ id: ref.id,name:myval }));
+   }
+   deleteMyitems(myval) {
+    this.afs.collection("items").doc(myval).delete();
+   }
+   updateItems (payload: { id: string, name: string}) {
+     console.log(`the payload is ${payload}`)
+     this.afs.collection("items").doc(payload.id).update(payload);
    }
 }
 

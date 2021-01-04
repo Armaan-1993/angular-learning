@@ -1,7 +1,9 @@
+import { ComponentService } from './../component.service';
 import { arrayList } from './../../mock-list';
 import { List } from './../list';
 import { Component, OnInit ,Input ,Output,EventEmitter} from '@angular/core';
 import { style } from '@angular/animations';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,7 +13,7 @@ import { style } from '@angular/animations';
 })
 export class ListContainerItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private componentService: ComponentService) { }
 
   inputValue : any = {id: "", name: ""}
 
@@ -25,23 +27,36 @@ export class ListContainerItemComponent implements OnInit {
   }
    @Output() myOutput: EventEmitter <number> = new EventEmitter();
 
+   items: Observable<List[]>;
+
    deleteItem (val) {
+     console.log(val);
     this.myOutput.emit(val);
+    this.componentService.deleteMyitems(val);
    }
+
 
    isVisible: boolean= false;
    buttonVisible: boolean= true;
    updatedInput: any;
 
-   openDiv(value) {
+   openDiv() {
      this.isVisible = true;
      this.buttonVisible = false;
-    //  const newObject = {id: Date.now(),name: updateObject}
+     
    }
-   closeDiv() {
+   saveFunction(updateValue) {
      this.isVisible = false;
      this.buttonVisible = true;
+     console.log(updateValue.id ,updateValue.name)
+     this.componentService.updateItems(updateValue)
    }
+
+   closeFunction(updateValue) {
+    this.isVisible = false;
+    this.buttonVisible = true;
+    console.log(updateValue.id ,updateValue.name)
+  }
   
     ngOnInit(): void { 
   }
