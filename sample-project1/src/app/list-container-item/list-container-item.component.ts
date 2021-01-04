@@ -2,7 +2,6 @@ import { ComponentService } from './../component.service';
 import { arrayList } from './../../mock-list';
 import { List } from './../list';
 import { Component, OnInit ,Input ,Output,EventEmitter} from '@angular/core';
-import { style } from '@angular/animations';
 import { Observable } from 'rxjs';
 
 
@@ -52,7 +51,7 @@ export class ListContainerItemComponent implements OnInit {
      this.componentService.updateItems(updateValue)
    }
 
-   closeFunction(updateValue) {
+   cancelFunction(updateValue) {
     this.isVisible = false;
     this.buttonVisible = true;
     console.log(updateValue.id ,updateValue.name)
