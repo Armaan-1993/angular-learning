@@ -19,6 +19,7 @@ export class ListContainerComponent implements OnInit {
   constructor(private componentService: ComponentService) { }
 
   itemsFromFs: List[];
+  
 
   @Input() 
  set  inputData (val) {
