@@ -1,7 +1,7 @@
 <div class="list-item-container">
   <p>
     id = {{ inputValue.id }}, name =
-    <span *ngIf="buttonVisible">{{ inputValue.name }}</span>
+    <span id="inputText" *ngIf="buttonVisible">{{ inputValue.name }}</span>
     <input
       type="text"
       [(ngModel)]="inputValue.name"
