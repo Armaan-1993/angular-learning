@@ -5,8 +5,9 @@
       placeholder="Enter a text here"
       [(ngModel)]="formInput"
       name="Armaan"
+      class="inputField"
     />
   </form>
-  <button (click)="onSelect()">Add To My Lists</button>
+  <button (click)="onSelect()" class="addToListBtn">Add To My Lists</button>
 </div>
 <app-list-container [inputData]="Item"></app-list-container>
