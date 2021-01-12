@@ -1,4 +1,7 @@
 // An example configuration file.
+const {
+  SpecReporter
+} = require("jasmine-spec-reporter");
 exports.config = {
   directConnect: true,
 
@@ -18,4 +21,22 @@ exports.config = {
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000,
   },
+  onPrepare: async () => {
+    require("ts-node").register({
+      project: "../tsconfig.json"
+    });
+    // const junitReporter = new JUnitXmlReporter({
+    //   savePath: "./e2e/test-results/E2E",
+    //   consolidateAll: false
+    // });
+    // jasmine.getEnv().addReporter(junitReporter);
+    jasmine.getEnv().addReporter(
+      new SpecReporter({
+        spec: {
+          displayStacktrace: true
+        }
+      })
+    );
+
+  }
 };

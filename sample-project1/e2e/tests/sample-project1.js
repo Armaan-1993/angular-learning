@@ -1,14 +1,19 @@
+
+const item = {
+  name : "Armaaaaaan"
+}
+
 describe("calculator app", () => {
   //insert
   it("add to list", () => {
     browser.ignoreSynchronization = true;
     browser.get("http://localhost:4200/");
-    element(by.css(".inputField")).sendKeys("Armaan Philip");
+    element(by.css(".inputField")).sendKeys(item.name);
     element(by.css(".addToListBtn")).click();
     browser.sleep(2000);
     var text = element(by.id("inputText"));
     // console.log("--------------------", text.getText());
-    expect(text.getText()).toEqual("Armaan Philip");
+    expect(text.getText()).toEqual(item.name);
     browser.sleep(2000);
   });
 
