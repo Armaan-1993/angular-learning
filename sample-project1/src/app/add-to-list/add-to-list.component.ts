@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { arrayList } from './../../mock-list';
 import { ComponentService } from './../component.service';
 import { List } from './../list';
 

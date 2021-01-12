@@ -10,13 +10,14 @@ export class ComponentService {
   itemsCollection: AngularFirestoreCollection<List>
   items: Observable<List[]>;
   constructor(public afs: AngularFirestore) {
-    this.items = this.afs.collection("items").valueChanges();
+    this.items = this.afs.collection("items" , ref => ref.orderBy("created",  "desc")).
+    valueChanges();
   }
    getItems() {
      return this.items;
    }
    addItems(myval) {
-    this.afs.collection("items").add({ name }).then((ref) => ref.update({ id: ref.id,name:myval }));
+    this.afs.collection("items").add({ name }).then((ref) => ref.update({ id: ref.id,name:myval, created: new Date() }));
    }
    deleteMyitems(myval) {
     this.afs.collection("items").doc(myval).delete();

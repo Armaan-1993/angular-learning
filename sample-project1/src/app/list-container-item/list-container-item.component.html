@@ -1,7 +1,7 @@
 <div class="list-item-container">
   <p>
-    id = {{ inputValue.id }}, name =
-    <span id="inputText" *ngIf="buttonVisible">{{ inputValue.name }}</span>
+    id = {{ inputValue?.id }}, name =
+    <span id="inputText" class="input-name-val">{{ inputValue?.name }}</span>
     <input
       type="text"
       [(ngModel)]="inputValue.name"
@@ -14,6 +14,7 @@
       (click)="openDiv(inputValue)"
       *ngIf="buttonVisible"
       class="updateBtn"
+      id="edit-button"
     >
       Update
     </button>
@@ -22,7 +23,7 @@
     </button>
   </div>
   <div class="hidden-div" [style.display]="isVisible ? 'block' : 'none'">
-    <button (click)="saveFunction(inputValue)" class="saveBtn">Save</button>
+    <button (click)="saveFunction(inputValue)" id="save-button" class="saveBtn">Save</button>
     <button (click)="cancelFunction(inputValue)">Cancel</button>
   </div>
 </div>
